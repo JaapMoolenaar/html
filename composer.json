@@ -1,11 +1,10 @@
 {
-  "name": "laravelcollective/html",
+  "name": "jaapmoolenaar.nl/html",
   "description": "HTML and Form Builders for the Laravel Framework",
   "license": "MIT",
-  "homepage": "http://laravelcollective.com",
   "support": {
-    "issues": "https://github.com/LaravelCollective/html/issues",
-    "source": "https://github.com/LaravelCollective/html"
+    "issues": "https://github.com/Satsume/html/issues",
+    "source": "https://github.com/Satsume/html"
   },
   "authors": [
     {
@@ -15,6 +14,11 @@
     {
       "name": "Taylor Otwell",
       "email": "taylorotwell@gmail.com"
+    },
+    {
+        "name": "Jaap Moolenaar",
+        "email": "jaap@jaapmoolenaar.nl",
+        "homepage": "http://www.jaapmoolenaar.nl"
     }
   ],
   "require": {
