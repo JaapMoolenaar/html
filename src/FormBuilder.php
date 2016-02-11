@@ -213,13 +213,17 @@ class FormBuilder
      *
      * @return \Illuminate\Support\HtmlString
      */
-    public function label($name, $value = null, $options = [])
+    public function label($name, $value = null, $options = [], $valueHtml = false)
     {
         $this->labels[] = $name;
 
         $options = $this->html->attributes($options);
 
-        $value = e($this->formatLabel($name, $value));
+        $value = $this->formatLabel($name, $value);
+        
+        if(!$valueHtml) {
+            $value = e($value);
+        }
 
         return $this->toHtmlString('<label for="' . $name . '"' . $options . '>' . $value . '</label>');
     }
