@@ -1,6 +1,6 @@
 # Forms & HTML
 
-[![Build Status](https://travis-ci.org/LaravelCollective/html.svg)](https://travis-ci.org/LaravelCollective/html)
+[![Build Status](https://travis-ci.org/Satsume/html.svg?branch=master)](https://travis-ci.org/Satsume/html)
 [![Total Downloads](https://poser.pugx.org/jaapmoolenaar.nl/html/downloads)](https://packagist.org/packages/jaapmoolenaar.nl/html)
 [![Latest Stable Version](https://poser.pugx.org/jaapmoolenaar.nl/html/v/stable)](https://packagist.org/packages/jaapmoolenaar.nl/html)
 [![Latest Unstable Version](https://poser.pugx.org/jaapmoolenaar.nl/html/v/unstable)](https://packagist.org/packages/jaapmoolenaar.nl/html)
