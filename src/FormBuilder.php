@@ -7,7 +7,7 @@ use BadMethodCallException;
 use Illuminate\Support\Collection;
 use Illuminate\Support\HtmlString;
 use Illuminate\Contracts\View\Factory;
-use Illuminate\Session\SessionInterface;
+use Illuminate\Session\Store AS SessionStore;
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Contracts\Routing\UrlGenerator;
 
@@ -50,7 +50,7 @@ class FormBuilder
     /**
      * The session store implementation.
      *
-     * @var \Illuminate\Session\SessionInterface
+     * @var \Illuminate\Session\Store
      */
     protected $session;
 
@@ -139,7 +139,7 @@ class FormBuilder
         // is used to spoof requests for this PUT, PATCH, etc. methods on forms.
         $attributes = array_merge(
 
-          $attributes, array_except($options, $this->reserved)
+            $attributes, array_except($options, $this->reserved)
 
         );
 
@@ -220,7 +220,7 @@ class FormBuilder
         $options = $this->html->attributes($options);
 
         $value = $this->formatLabel($name, $value);
-        
+
         if(!$valueHtml) {
             $value = e($value);
         }
@@ -1164,7 +1164,7 @@ class FormBuilder
     /**
      * Get the session store implementation.
      *
-     * @return  \Illuminate\Session\SessionInterface  $session
+     * @return  \Illuminate\Session\Store  $session
      */
     public function getSessionStore()
     {
@@ -1174,11 +1174,11 @@ class FormBuilder
     /**
      * Set the session store implementation.
      *
-     * @param  \Illuminate\Session\SessionInterface $session
+     * @param  \Illuminate\Session\Store $session
      *
      * @return $this
      */
-    public function setSessionStore(SessionInterface $session)
+    public function setSessionStore(SessionStore $session)
     {
         $this->session = $session;
 
