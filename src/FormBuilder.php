@@ -199,7 +199,15 @@ class FormBuilder
      */
     public function token()
     {
-        $token = ! empty($this->csrfToken) ? $this->csrfToken : $this->session->getToken();
+        if (! empty($this->csrfToken)) {
+            $token = $this->csrfToken;
+        }
+        elseif(method_exists($this->session, 'getToken')) {
+            $token = $this->session->getToken();
+        }
+        elseif(method_exists($this->session, 'token')) {
+            $token = $this->session->token();
+        }
 
         return $this->hidden('_token', $token);
     }
